@@ -50,7 +50,7 @@ app.post("/api/generate", async (req, res) => {
         return res.status(400).json({ error: "API Key not found!" });
     }
 
-    const url = `https://api.cloud.llamaindex.ai/api/parsing/upload?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     try {
         const response = await fetch(url, {
